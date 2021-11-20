@@ -7,7 +7,7 @@ import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.util.Duration;
-import view.MenuView;
+import view.MainView;
 import view.StartView;
 
 public class StartViewController {
@@ -33,8 +33,8 @@ public class StartViewController {
 
 	private void createMenuViewAction() {
 		this.startView.getLoginBtn().setOnAction(e -> {
-			MenuViewController menuViewController = new MenuViewController(new MenuView());
-			this.startView.getScene().setRoot(menuViewController.getMenuView());
+			MainViewController mainViewController = new MainViewController(new MainView());
+			this.startView.getScene().setRoot(mainViewController.getMainView());
 		});
 	}
 }

@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 import view.StartView;
 
 public class Main extends Application {
-	private static final int SCENE_WIDTH = 800, SCENE_HEIGHT = 500;
+	private static final int SCENE_WIDTH = 900, SCENE_HEIGHT = 600;
 	private static final String CSS_PATH = "application.css";
 
 	public static void main(String[] args) {
