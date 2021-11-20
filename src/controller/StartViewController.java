@@ -33,7 +33,7 @@ public class StartViewController {
 
 	private void createMenuViewAction() {
 		this.startView.getLoginBtn().setOnAction(e -> {
-			MainViewController mainViewController = new MainViewController(new MainView());
+			MainViewController mainViewController = new MainViewController(new MainView(), this);
 			this.startView.getScene().setRoot(mainViewController.getMainView());
 		});
 	}

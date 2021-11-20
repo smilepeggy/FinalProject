@@ -16,8 +16,6 @@ public class MenuView extends BorderPane {
 	private Button InvoiceBtn;
 	private Button accountManagerBtn;
 	private Button logoutBtn;
-	private Label loginNameLbl;
-	private Label dateAndTimeLbl;
 	private Label appNameLbl;
 	private Label imageLbl;
 
@@ -32,8 +30,6 @@ public class MenuView extends BorderPane {
 		this.InvoiceBtn = new Button("Invoice");
 		this.accountManagerBtn = new Button("Account Manager");
 		this.logoutBtn = new Button("Logout");
-		this.loginNameLbl = new Label("Login as ");
-		this.dateAndTimeLbl = new Label("Date and Time");
 		this.appNameLbl = new Label("App name");
 		this.imageLbl = new Label();
 
@@ -44,8 +40,7 @@ public class MenuView extends BorderPane {
 		this.productBtn.setMaxWidth(WIDTH);
 
 		final VBox vBoxLeft = new VBox();
-		vBoxLeft.getChildren().addAll(this.productBtn, this.InvoiceBtn, this.accountManagerBtn, this.logoutBtn,
-				this.loginNameLbl);
+		vBoxLeft.getChildren().addAll(this.productBtn, this.InvoiceBtn, this.accountManagerBtn, this.logoutBtn);
 		vBoxLeft.setAlignment(Pos.CENTER_LEFT);
 		vBoxLeft.setSpacing(30);
 		this.setLeft(vBoxLeft);
@@ -53,7 +48,6 @@ public class MenuView extends BorderPane {
 		final VBox vBoxRight = new VBox();
 		vBoxRight.getChildren().addAll(this.appNameLbl, this.imageLbl);
 		this.setCenter(vBoxRight);
-		this.setBottom(this.dateAndTimeLbl);
 
 	}
 
@@ -77,14 +71,6 @@ public class MenuView extends BorderPane {
 
 	public Button getLogoutBtn() {
 		return this.logoutBtn;
-	}
-
-	public Label getLoginNameLbl() {
-		return this.loginNameLbl;
-	}
-
-	public Label getDateAndTimeLbl() {
-		return this.dateAndTimeLbl;
 	}
 
 	public Label getAppNameLbl() {

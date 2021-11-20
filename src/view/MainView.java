@@ -4,6 +4,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 public class MainView extends BorderPane {
 	private static final int WIDTH = 100;
@@ -18,12 +19,14 @@ public class MainView extends BorderPane {
 
 	private void createElementsToView() {
 		this.loginNameLbl = new Label("Login as ");
-		this.dateAndTimeLbl = new Label("Date and Time");
+		this.dateAndTimeLbl = new Label();
 		this.menuBtn = new Button("Menu");
 		this.menuBtn.setVisible(false);
 		this.menuBtn.setMaxWidth(WIDTH);
 		final HBox hBox = new HBox();
-		hBox.getChildren().addAll(this.loginNameLbl, this.dateAndTimeLbl, this.menuBtn);
+		final VBox vBox = new VBox();
+		vBox.getChildren().addAll(this.loginNameLbl, this.dateAndTimeLbl);
+		hBox.getChildren().addAll(vBox, this.menuBtn);
 		this.setBottom(hBox);
 	}
 

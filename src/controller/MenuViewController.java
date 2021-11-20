@@ -8,10 +8,13 @@ public class MenuViewController {
 
 	private MenuView menuView;
 	private MainViewController mainViewController;
+	private StartViewController startViewController;
 
-	public MenuViewController(MenuView menuView, MainViewController mainViewController) {
+	public MenuViewController(MenuView menuView, MainViewController mainViewController,
+			StartViewController startViewController) {
 		this.menuView = menuView;
 		this.mainViewController = mainViewController;
+		this.startViewController = startViewController;
 		setAllBtnsActions();
 	}
 
@@ -20,6 +23,12 @@ public class MenuViewController {
 	}
 
 	private void setAllBtnsActions() {
+		this.mainViewController.getMainView().getMenuBtn().setOnAction(e -> {
+			showMenuView();
+		});
+		this.menuView.getLogoutBtn().setOnAction(e -> {
+			showStartView();
+		});
 		this.menuView.getProductBtn().setOnAction(e -> {
 			showProductView();
 			this.mainViewController.getMainView().getMenuBtn().setVisible(true);
@@ -29,9 +38,13 @@ public class MenuViewController {
 			this.mainViewController.getMainView().getMenuBtn().setVisible(true);
 		});
 
-		this.mainViewController.getMainView().getMenuBtn().setOnAction(e -> {
-			showMenuView();
-		});
+	}
+
+	private void showStartView() {
+		this.mainViewController.getMainView().setLeft(null);
+		this.mainViewController.getMainView().setTop(null);
+		this.mainViewController.getMainView().setBottom(null);
+		this.mainViewController.getMainView().setCenter(this.startViewController.getStartView());
 	}
 
 	private void showMenuView() {
@@ -49,4 +62,5 @@ public class MenuViewController {
 		InvoiceViewController invoiceViewController = new InvoiceViewController(new InvoiceView());
 		this.mainViewController.getMainView().setCenter(invoiceViewController.getInvoiceView());
 	}
+
 }

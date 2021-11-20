@@ -13,10 +13,12 @@ import view.MenuView;
 public class MainViewController {
 
 	private MainView mainView;
+	private StartViewController startViewController;
 
-	public MainViewController(MainView mainView) {
+	public MainViewController(MainView mainView, StartViewController startViewController) {
 		setDateAndTimeIntoStartView();
 		this.mainView = mainView;
+		this.startViewController = startViewController;
 		showMenuView();
 	}
 
@@ -32,7 +34,7 @@ public class MainViewController {
 	}
 
 	public void showMenuView() {
-		MenuViewController menuViewController = new MenuViewController(new MenuView(), this);
+		MenuViewController menuViewController = new MenuViewController(new MenuView(), this, this.startViewController);
 		this.mainView.setCenter(menuViewController.getMenuView());
 	}
 
