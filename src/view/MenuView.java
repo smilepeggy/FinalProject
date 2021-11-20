@@ -13,7 +13,7 @@ public class MenuView extends BorderPane {
 	private static final int WIDTH = 200;
 
 	private Button productBtn;
-	private Button allInvoicesBtn;
+	private Button InvoiceBtn;
 	private Button accountManagerBtn;
 	private Button logoutBtn;
 	private Label loginNameLbl;
@@ -29,7 +29,7 @@ public class MenuView extends BorderPane {
 	private void createElementsToView() {
 
 		this.productBtn = new Button("Product");
-		this.allInvoicesBtn = new Button("All Invoices");
+		this.InvoiceBtn = new Button("Invoice");
 		this.accountManagerBtn = new Button("Account Manager");
 		this.logoutBtn = new Button("Logout");
 		this.loginNameLbl = new Label("Login as ");
@@ -38,13 +38,13 @@ public class MenuView extends BorderPane {
 		this.imageLbl = new Label();
 
 		this.productBtn.setMaxWidth(WIDTH);
-		this.allInvoicesBtn.setMaxWidth(WIDTH);
+		this.InvoiceBtn.setMaxWidth(WIDTH);
 		this.accountManagerBtn.setMaxWidth(WIDTH);
 		this.logoutBtn.setMaxWidth(WIDTH);
 		this.productBtn.setMaxWidth(WIDTH);
 
 		final VBox vBoxLeft = new VBox();
-		vBoxLeft.getChildren().addAll(this.productBtn, this.allInvoicesBtn, this.accountManagerBtn, this.logoutBtn,
+		vBoxLeft.getChildren().addAll(this.productBtn, this.InvoiceBtn, this.accountManagerBtn, this.logoutBtn,
 				this.loginNameLbl);
 		vBoxLeft.setAlignment(Pos.CENTER_LEFT);
 		vBoxLeft.setSpacing(30);
@@ -67,8 +67,8 @@ public class MenuView extends BorderPane {
 		return this.productBtn;
 	}
 
-	public Button getAllInvoicesBtn() {
-		return this.allInvoicesBtn;
+	public Button getInvoiceBtn() {
+		return this.InvoiceBtn;
 	}
 
 	public Button getAccountManagerBtn() {

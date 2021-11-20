@@ -20,6 +20,7 @@ public class MainView extends BorderPane {
 		this.loginNameLbl = new Label("Login as ");
 		this.dateAndTimeLbl = new Label("Date and Time");
 		this.menuBtn = new Button("Menu");
+		this.menuBtn.setVisible(false);
 		this.menuBtn.setMaxWidth(WIDTH);
 		final HBox hBox = new HBox();
 		hBox.getChildren().addAll(this.loginNameLbl, this.dateAndTimeLbl, this.menuBtn);

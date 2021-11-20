@@ -31,8 +31,9 @@ public class MainViewController {
 		return this.mainView;
 	}
 
-	private void showMenuView() {
+	public void showMenuView() {
 		MenuViewController menuViewController = new MenuViewController(new MenuView(), this);
 		this.mainView.setCenter(menuViewController.getMenuView());
 	}
+
 }
