@@ -3,6 +3,7 @@ package application;
 import controller.StartViewController;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import view.StartView;
 
@@ -19,7 +20,9 @@ public class Main extends Application {
 		StartViewController startViewController = new StartViewController(new StartView());
 		Scene scene = new Scene(startViewController.getStartView(), SCENE_WIDTH, SCENE_HEIGHT);
 		primaryStage.setScene(scene);
+		primaryStage.getIcons().add(new Image("test.png"));
 		primaryStage.setTitle("Final Project");
 		primaryStage.show();
+
 	}
 }

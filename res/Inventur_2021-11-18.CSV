@@ -1,0 +1,27 @@
+Artikelnummer;Name;Einkaufspreis;Verkaufspreis;Menge (aktuell);Menge (maximal);Menge (minimal);Hersteller;Lieferant
+100321;Kleines Radio;90,50  ;119,95  ;13;30;5;Dilips;Elektro Heinz
+100322;Großes Radio;150,42  ;209,95  ;15;30;5;Dilips;Elektro Heinz
+100421;Kleines Navi;140,63  ;190,95  ;4;20;5;TamTam;Elektro Heinz
+100422;Großes Navi;200,45  ;270,95  ;18;20;5;TamTam;Elektro Heinz
+203071;Fußmatte (vorne);10,00  ;19,95  ;23;40;10;Gummiheld;Zubehör Franz
+203073;Fußmatte (hinten);10,00  ;19,95  ;20;40;10;Gummiheld;Zubehör Franz
+507701;Scheibenwischblätter (vorne);9,90  ;19,95  ;11;50;10;Gummiheld;Zubehör Franz
+507702;Scheibenwischblätter (hinten);9,90  ;19,95  ;13;50;10;Gummiheld;Zubehör Franz
+334245;Leuchtmittel H7;12,50  ;24,95  ;25;50;10;Asram;Elektro Heinz
+334246;Leuchtmittel W5W;12,50  ;24,95  ;32;50;10;Asram;Elektro Heinz
+334247;Leuchtmittel H10;12,50  ;24,95  ;41;50;10;Asram;Elektro Heinz
+334248;Leuchtmittel H1;12,50  ;24,95  ;29;50;10;Asram;Elektro Heinz
+653422;Sitzschoner (vorne);8,81  ;15,95  ;19;20;5;Polster Müller;Zubehör Franz
+653423;Sitzschoner (hinten);8,81  ;15,95  ;15;20;5;Polster Müller;Zubehör Franz
+653430;Gurtpolster;4,20  ;9,95  ;14;20;5;Polster Müller;Zubehör Franz
+706020;Kindersitz;193,33  ;270,75  ;2;10;3;juie;Sitz Mayer
+706520;Kindersitz;250,33  ;330,25  ;8;10;3;Rämer;Sitz Mayer
+113341;Ölfilter;6,33  ;8,59  ;6;10;3;Basch;Zubehör Franz
+113344;Luftfilter;6,33  ;8,59  ;6;20;5;Basch;Zubehör Franz
+112794;Bremssattel;75,21  ;116,95  ;11;15;3;Superbreake;Zubehör Franz
+880937;Parkscheibe (analog);0,15  ;0,30  ;88;100;20;ParkManager;Zubehör Franz
+880938;Parkscheibe (digital);4,20  ;9,95  ;65;75;15;ParkManager;Zubehör Franz
+100001;Glasreiniger;1,29  ;2,59  ;112;150;20;Blitzsauber;Blitzsauber
+100002;Polsterpolitur;1,29  ;2,59  ;110;150;20;Blitzsauber;Blitzsauber
+100003;Felgenreiniger;1,29  ;2,59  ;132;150;20;Blitzsauber;Blitzsauber
+100004;WD-41;2,50  ;5,99  ;140;150;20;WD-41;Blitzsauber
