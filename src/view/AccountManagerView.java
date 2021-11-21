@@ -1,6 +1,7 @@
 package view;
 
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
@@ -16,6 +17,7 @@ public class AccountManagerView extends VBox {
 	private Button deleteBtn;
 	private TextField nameTxf;
 	private TextField passwordTxf;
+	private CheckBox isAdminCheckBox;
 
 	public AccountManagerView() {
 		intiView();
@@ -32,11 +34,13 @@ public class AccountManagerView extends VBox {
 		this.deleteBtn = new Button("Delete");
 		this.nameTxf = new TextField();
 		this.passwordTxf = new TextField();
+		this.isAdminCheckBox = new CheckBox("Is Admin");
+
 		final HBox hBox01 = new HBox();
 		final HBox hBox02 = new HBox();
 		hBox01.getChildren().addAll(new Label("Name: "), this.nameTxf, new Label("Password: "), this.passwordTxf);
 		hBox02.getChildren().addAll(this.createBtn, this.deleteBtn);
-		this.getChildren().addAll(this.accountTableView, hBox01, hBox02);
+		this.getChildren().addAll(this.accountTableView, hBox01, this.isAdminCheckBox, hBox02);
 
 	}
 
