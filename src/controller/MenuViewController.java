@@ -1,6 +1,7 @@
 package controller;
 
 import view.AccountManagerView;
+import view.AllInvoicesView;
 import view.InvoiceView;
 import view.MenuView;
 import view.ProductView;
@@ -43,6 +44,12 @@ public class MenuViewController {
 			this.mainViewController.getMainView().getMenuBtn().setVisible(true);
 		});
 
+		this.menuView.getInvoiceBtn().setOnAction(e -> {
+			showAllInvoicesView();
+			this.mainViewController.getMainView().getMenuBtn().setVisible(true);
+
+		});
+
 	}
 
 	private void showStartView() {
@@ -74,4 +81,9 @@ public class MenuViewController {
 		this.mainViewController.getMainView().setCenter(accountManagerViewController.getAccountManagerView());
 	}
 
+	private void showAllInvoicesView() {
+		AllInvoicesViewController allInvoicesViewController = new AllInvoicesViewController(new AllInvoicesView());
+		this.mainViewController.getMainView().setCenter(allInvoicesViewController.getAllInvoicesView());
+
+	}
 }

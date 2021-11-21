@@ -11,25 +11,31 @@ public class InvoiceView extends VBox {
 	private TableViewBuilder<Product> currentInvoiceTableView;
 
 	private Button allInvoicesBtn;
+	private Button deleteBtn;
 	private Button clearBtn;
 	private Button finishBtn;
 
-//	private Label currentInvoiceLbl = new Label("Current Invoice: ");
 	private Label totalPriceLbl = new Label("Total Price: ");
 
 	public InvoiceView() {
+		initView();
+	}
+
+	private void initView() {
+		createCurrentInvoiceTableView();
 		createElementsToView();
 	}
 
 	private void createElementsToView() {
 		this.allInvoicesBtn = new Button("All Invoices");
+		this.deleteBtn = new Button("Delete");
 		this.clearBtn = new Button("clear");
 		this.finishBtn = new Button("Finish");
-		this.getChildren().addAll(this.allInvoicesBtn, new Label("Current Invoice: "), createCurrentInvoiceTable(),
-				this.totalPriceLbl, this.clearBtn, this.finishBtn);
+		this.getChildren().addAll(this.allInvoicesBtn, new Label("Current Invoice: "), this.currentInvoiceTableView,
+				this.totalPriceLbl, this.deleteBtn, this.clearBtn, this.finishBtn);
 	}
 
-	private TableViewBuilder<Product> createCurrentInvoiceTable() {
+	private void createCurrentInvoiceTableView() {
 		this.currentInvoiceTableView = new TableViewBuilder<Product>();
 		this.currentInvoiceTableView.getColumns()
 				.add(this.currentInvoiceTableView.build("Artikelnummer", "itemNumber"));
@@ -40,7 +46,6 @@ public class InvoiceView extends VBox {
 		for (TableColumn<Product, ?> column : this.currentInvoiceTableView.getColumns()) {
 			column.setPrefWidth(100);
 		}
-		return this.currentInvoiceTableView;
 
 	}
 }
